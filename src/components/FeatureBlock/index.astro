@@ -1,0 +1,29 @@
+---
+interface Props {
+    title: string;
+    theme?: 'light' | 'dark';
+    columns?: 4 | 3;
+}
+
+const { title, theme, columns } = Astro.props;
+
+const gridRows = columns === 3 ? '1fr 1fr 1fr' : '1fr 1fr 1fr 1fr';
+---
+
+<div class="feature-block">
+    <h2 class="feature-block__title">{title}</h2>
+    <div class="feature-block__row">
+        <slot />
+    </div>
+</div>
+
+<style lang="scss" define:vars={{ gridRows }}>
+    .feature-block {
+        text-align: center;
+
+        &__row {
+            display: grid; 
+            grid-template-columns: var(--gridRows); 
+        }
+    }
+</style>
