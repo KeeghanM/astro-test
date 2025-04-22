@@ -1,0 +1,41 @@
+---
+import Navbar from '../components/navbar/index.astro'
+
+interface Props {
+  SEO: {
+    title: string
+    metaDescription: string
+    noindex?: boolean
+    nofollow?: boolean
+  }
+}
+
+const { SEO } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <title>{SEO.title}</title>
+    <meta
+      name="description"
+      content={SEO.metaDescription}
+    />
+    {
+      SEO.noindex !== undefined || SEO.nofollow !== undefined ? (
+        <meta
+          name="robots"
+          content={`${SEO.noindex && 'noindex'}${SEO.nofollow && `${SEO.noindex ? ',' : ''}nofollow`}`}
+        />
+      ) : null
+    }
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>

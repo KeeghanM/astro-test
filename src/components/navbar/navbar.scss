@@ -1,0 +1,23 @@
+.navbar {
+    color: white;
+    padding: 10px;
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+}

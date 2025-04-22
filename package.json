@@ -15,7 +15,12 @@
     "@types/react-dom": "^19.1.2",
     "astro": "^5.6.2",
     "react": "^19.1.0",
+<<<<<<< HEAD
     "react-dom": "^19.1.0"
+=======
+    "react-dom": "^19.1.0",
+    "sass": "^1.87.0"
+>>>>>>> a079952b6f8155614cf9ec7d95881c98d6c5668c
   },
   "devDependencies": {
     "prettier": "3.5.3",

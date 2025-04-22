@@ -1,6 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import MainLayout from '../layouts/MainLayout.astro'
 ---
 
-<Layout title="Vertu Test">
-</Layout>
+<MainLayout
+  SEO={{
+    title: 'Home Page Test',
+    metaDescription: 'Really cool website',
+  }}
+>
+  <h1>Hello, World</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod vitae odit
+    debitis quis repudiandae, consequatur nisi nostrum iure eveniet facilis
+    dolore sit facere autem explicabo eius dignissimos ex distinctio blanditiis.
+  </p>
+</MainLayout>
