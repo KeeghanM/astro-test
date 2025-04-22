@@ -26,7 +26,7 @@ export default function Navbar() {
                 color: currentLink === link.title ? "blue" : "black",
                 textDecoration: currentLink === link.title ? "underline" : "none"
             }} className="navbar__link-text" >{link.title}</a>
-            </li>
+          </li>
         ))}
       </ul>
     </nav>
