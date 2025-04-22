@@ -1,15 +1,35 @@
 ---
-    interface Props {
-        icon: string;
-        title: string;
-        description: string;
-    }
+import { Icon } from "astro-icon/components";
 
-const { icon, title, description } = Astro.props;
+interface Props {
+  iconSource: string;
+  title: string;
+  description: string;
+  imgSrc?: string;
+  alt?: string;
+  typeOfIcon?: "icon" | "image";
+}
+
+const { iconSource, title, description, imgSrc, alt, typeOfIcon } = Astro.props;
 ---
 
 <div>
-    <img src={icon} />
-    <h3>{title}</h3>
-    <p>{description}</p>
+  <div class="icon-container">
+    {
+      typeOfIcon === "icon" ? (
+        <Icon name="mdi:account" />
+      ) : (
+        <img
+          class="icon"
+          src={imgSrc}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+        />
+      )
+    }
+  </div>
+
+  <h3>{title}</h3>
+  <p>{description}</p>
 </div>

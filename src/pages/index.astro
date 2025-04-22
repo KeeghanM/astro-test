@@ -1,20 +1,20 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
-import FeatureBlock from '../components/FeatureBlock/index.astro'
-import Feature from '../components/Feature/index.astro'
+import MainLayout from "../layouts/MainLayout.astro";
+import FeatureBlock from "../components/FeatureBlock/index.astro";
+import Feature from "../components/Feature/index.astro";
 ---
 
 <MainLayout
   SEO={{
-    title: 'Home Page Test',
-    metaDescription: 'Really cool website',
+    title: "Home Page Test",
+    metaDescription: "Really cool website",
   }}
 >
   <FeatureBlock title="Feature block" columns={4}>
-    <Feature icon="test" title="title" description="description" />
-    <Feature icon="test" title="title 2" description="description" />
-    <Feature icon="test" title="title 3" description="description" />
-    <Feature icon="test" title="title 4" description="description" />
+    <Feature iconSource="test" title="title" description="description" />
+    <Feature iconSource="test" title="title 2" description="description" />
+    <Feature iconSource="test" title="title 3" description="description" />
+    <Feature iconSource="test" title="title 4" description="description" />
   </FeatureBlock>
   <h1>Hello, World</h1>
   <p>

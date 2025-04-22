@@ -1,0 +1,18 @@
+---
+interface Props {
+  imgSrc: string;
+  altText: string;
+}
+
+const { imgSrc, altText } = Astro.props;
+---
+
+<div class="icon-container">
+  <img src={imgSrc} alt={altText} class="icon-container__image" />
+</div>
+
+<style lang="scss">
+  .icon-container {
+    background-color: #f0f0f0;
+  }
+</style>
