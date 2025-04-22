@@ -1,10 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Hero from '../components/hero.astro'
-import Features from '../components/features.astro'
+import MainLayout from '../layouts/MainLayout.astro'
 ---
 
-<Layout title="Vertu Test">
-  <Hero title="Hello Richard" />
-  <Features />
-</Layout>
+<MainLayout
+  SEO={{
+    title: 'Home Page Test',
+    metaDescription: 'Really cool website',
+  }}
+>
+  <h1>Hello, World</h1>
+</MainLayout>
